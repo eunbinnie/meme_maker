@@ -13,10 +13,8 @@
 </head>
 
 <body>
-  <canvas></canvas>
-  <input id="line-width" type="range" min="1" max="20" value="10" step="0.1" />
-  <input id="line-color" type="color" />
-  <div>
+  <div class="color-options">
+    <input id="line-color" type="color" />
     <div class="color-option" style="background-color: #c0392b;" data-color="#c0392b"></div>
     <div class="color-option" style="background-color: #e74c3c;" data-color="#e74c3c"></div>
     <div class="color-option" style="background-color: #e67e22;" data-color="#e67e22"></div>
@@ -31,11 +29,21 @@
     <div class="color-option" style="background-color: #2c3e50;" data-color="#2c3e50"></div>
   </div>
 
-  <button id="mode-btn">Fill</button>
-  <button id="destroy-btn">Destroy</button>
-  <button id="eraser-btn">Erase</button>
+  <canvas></canvas>
+  <div class="btns">
+    <input id="line-width" type="range" min="1" max="20" value="10" step="0.1" />
 
-  <input type="file" accept="image/*" id="file" />
+    <button id="mode-btn">Fill</button>
+    <button id="destroy-btn">Destroy</button>
+    <button id="eraser-btn">Erase</button>
+
+    <label for="file">
+      Add Photo
+      <input type="file" accept="image/*" id="file" />
+    </label>
+    <input type="text" placeholder="Add text here... :)" id="text" />
+    <button id="save">Save image</button>
+  </div>
 
   <!-- <script src="./js/canvas.js"></script> -->
   <!-- <script src="./js/mousemove.js"></script> -->
